@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
               
-                git branch: 'main', credentialsId: '{{env.GIT_TOKEN}}', url: 'https://github.com/harshwardhan-fr/'
+                git branch: 'main', credentialsId: '{{env.GIT_TOKEN}}', url: 'https://github.com/Harshwardhan-fr/Phase5Project'
             }
         }
 
@@ -17,8 +17,8 @@ pipeline {
 
         stage('Build and Push Docker Image') {
             environment {
-                DOCKER_IMAGE_NAME = 'elk-app'
-                DOCKER_REGISTRY = 'aadisubedy'
+                DOCKER_IMAGE_NAME = 'appu'
+                DOCKER_REGISTRY = 'habok'
                 DOCKER_IMAGE_TAG = 'latest'
             }
             steps {
